@@ -181,6 +181,10 @@
                             <tbody>
                                 <tr class="border-b">
                                     <td class="py-2 font-medium">Monday - Saturday</td>
+                                    <td class="py-2 text-right">11:00 AM – 1:00 PM</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="py-2 font-medium">Monday - Saturday</td>
                                     <td class="py-2 text-right">5:30 PM – 8:30 PM</td>
                                 </tr>
                                 <tr class="border-b">
@@ -302,8 +306,8 @@
             let isClinicOpen = false;
             // Monday to Saturday (day 1 to 6)
             if (day >= 1 && day <= 6) {
-                const morningSession = (currentTime >= 10 && currentTime < 13);
-                const eveningSession = (currentTime >= 18 && currentTime < 21);
+                const morningSession = (currentTime >= 11 && currentTime < 13);
+                const eveningSession = (currentTime >= 17.5 && currentTime < 20.5);
                 if (morningSession || eveningSession) {
                     isClinicOpen = true;
                 }
