@@ -3,12 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jayaa Tharsini Homoeo Clinic - Nolambur, Chennai</title>
+    <title>Homeopathy Clinic in Nolambur, Chennai | Jayaa Tharsini Homoeo Clinic</title>
+
+    <!-- SEO -->
+    <meta name="description" content="Jayaa Tharsini Homoeo Clinic, Nolambur, Chennai. Dr. Swarnalatha BHMS, MSc(Psy) — 25+ years experience. Homeopathy treatment for kidney stones, thyroid, skin, hair loss, piles & more. Call 98946 86664.">
+    <link rel="canonical" href="https://jayaatharsinihomoeoclinic.netlify.app/">
+    <meta property="og:title" content="Jayaa Tharsini Homoeo Clinic – Nolambur, Chennai">
+    <meta property="og:description" content="25+ years experienced homeopathy doctor in Nolambur. In-clinic & online consultation. Call or WhatsApp 98946 86664.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jayaatharsinihomoeoclinic.netlify.app/">
+    <meta property="og:image" content="https://jayaatharsinihomoeoclinic.netlify.app/photo.jpg">
+
+    <!-- LocalBusiness schema for Google -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalClinic",
+      "name": "Jayaa Tharsini Homoeo Clinic",
+      "image": "https://jayaatharsinihomoeoclinic.netlify.app/photo.jpg",
+      "url": "https://jayaatharsinihomoeoclinic.netlify.app/",
+      "telephone": "+919894686664",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "9, Shakti Nagar 2nd Avenue, Shakthi Nagar, Nolambur",
+        "addressLocality": "Chennai",
+        "addressRegion": "Tamil Nadu",
+        "postalCode": "600095",
+        "addressCountry": "IN"
+      },
+      "medicalSpecialty": "Homeopathy",
+      "openingHoursSpecification": [
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "11:00", "closes": "13:00" },
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "18:00", "closes": "20:30" }
+      ]
+    }
+    </script>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-2WPF9VSFTR"></script>
     <script>
@@ -17,256 +52,649 @@
       gtag('js', new Date());
 
       gtag('config', 'G-2WPF9VSFTR');
+
+      /* ============================================================
+         GOOGLE ADS CONVERSION TRACKING — ACTION NEEDED (one time)
+         ============================================================
+         1. In Google Ads: Goals > Conversions > + New conversion action
+            > Website > create TWO actions:
+              a) "Phone Call Click"   b) "WhatsApp Click"
+         2. Google gives you a Conversion ID like AW-123456789 and a
+            Label for each action like AbC-D_efGhIjKlMnOp.
+         3. Paste them below.
+         ============================================================ */
+      var ADS_CONVERSION_ID   = "";  // e.g. "AW-123456789"
+      var ADS_LABEL_CALL      = "";  // label for Phone Call Click
+      var ADS_LABEL_WHATSAPP  = "";  // label for WhatsApp Click
+      var ADS_LABEL_BOOKING   = "";  // label for Booking Form Submit (optional 3rd conversion)
+
+      if (ADS_CONVERSION_ID) { gtag('config', ADS_CONVERSION_ID); }
+
+      function trackConversion(eventName, adsLabel) {
+        gtag('event', eventName, { event_category: 'lead', event_label: eventName });
+        if (ADS_CONVERSION_ID && adsLabel) {
+          gtag('event', 'conversion', { send_to: ADS_CONVERSION_ID + '/' + adsLabel });
+        }
+      }
     </script>
 
     <style>
+        :root {
+            --forest: #0e3b2e;
+            --emerald: #14805e;
+            --mint: #d8f3e6;
+            --cream: #fbf9f4;
+            --gold: #e8b04b;
+            --ink: #1c2b26;
+        }
+        * { -webkit-tap-highlight-color: transparent; }
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background: var(--cream);
+            color: var(--ink);
         }
-        .font-lora {
-            font-family: 'Lora', serif;
+        .font-display { font-family: 'Fraunces', serif; }
+        .text-forest { color: var(--forest); }
+        .bg-forest { background-color: var(--forest); }
+        .text-emeraldx { color: var(--emerald); }
+        .bg-emeraldx { background-color: var(--emerald); }
+        .bg-mint { background-color: var(--mint); }
+        .bg-cream { background-color: var(--cream); }
+        .text-gold { color: var(--gold); }
+
+        /* Hero gradient mesh */
+        .hero-mesh {
+            background:
+                radial-gradient(ellipse 60% 50% at 15% 20%, rgba(216,243,230,0.9), transparent 60%),
+                radial-gradient(ellipse 50% 60% at 85% 15%, rgba(232,176,75,0.18), transparent 60%),
+                radial-gradient(ellipse 70% 60% at 70% 90%, rgba(20,128,94,0.14), transparent 60%),
+                var(--cream);
         }
-        .hero-bg {
-            background-image: linear-gradient(to right, rgba(240, 253, 244, 0.9), rgba(209, 250, 229, 0.8)), url('https://placehold.co/1600x900/e0e0e0/ffffff?text=Natural+Healing');
-            background-size: cover;
-            background-position: center;
+        /* Glassmorphic header */
+        .glass {
+            background: rgba(251,249,244,0.82);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
         }
-        .section-title {
-            font-family: 'Lora', serif;
-            font-weight: 600;
+        /* Card hover */
+        .blob-card {
+            border-radius: 1.5rem;
+            transition: transform .3s ease, box-shadow .3s ease;
         }
-        .active-status {
-            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        .blob-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 40px -12px rgba(14,59,46,0.18);
         }
-        @keyframes pulse {
-            0%, 100% {
-                opacity: 1;
-            }
-            50% {
-                opacity: .5;
-            }
+        /* Gentle float animation for hero botanicals */
+        @keyframes floaty { 0%,100% { transform: translateY(0px) rotate(0deg);} 50% { transform: translateY(-12px) rotate(2deg);} }
+        .floaty { animation: floaty 6s ease-in-out infinite; }
+        .floaty-slow { animation: floaty 9s ease-in-out infinite; }
+        @keyframes pulse { 0%,100% {opacity:1;} 50% {opacity:.45;} }
+        .active-status { animation: pulse 2s cubic-bezier(0.4,0,0.6,1) infinite; }
+
+        /* Scroll reveal */
+        .reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease; }
+        .reveal.visible { opacity: 1; transform: translateY(0); }
+
+        @media (prefers-reduced-motion: reduce) {
+            .floaty, .floaty-slow, .active-status { animation: none; }
+            .reveal { opacity: 1; transform: none; transition: none; }
+            .blob-card:hover { transform: none; }
+        }
+        @media (max-width: 767px) {
+            body { padding-bottom: 72px; }
+        }
+        .bg-wa { background-color: #25D366; }
+        .bg-wa:hover { background-color: #1ebe5b; }
+        .btn-press:active { transform: scale(.97); }
+
+        /* Scrolling watermark background — line-art medical & botanical motifs */
+        .watermark-layer {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            opacity: 0.055;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='280' height='280' viewBox='0 0 280 280'%3E%3Cg fill='none' stroke='%230e3b2e' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M40 70 C20 50 25 20 55 12 C60 38 58 58 40 70 Z M44 62 C44 62 46 34 52 18'/%3E%3Cpath d='M170 30 C170 30 158 45 158 54 a12 12 0 0 0 24 0 C182 45 170 30 170 30 Z'/%3E%3Cpath d='M20 160 h20 l8 -18 10 36 8 -18 h22'/%3E%3Cpath d='M200 120 v-12 m0 0 v-12 m-12 12 h24'/%3E%3Ccircle cx='240' cy='200' r='10'/%3E%3Ccircle cx='218' cy='214' r='7'/%3E%3Cpath d='M80 220 a18 18 0 0 0 36 0 v-16 m-36 16 v-16 m-6 -6 h10 m28 6 h10 m-52 -6 v6 m52 -6 v6'/%3E%3Ccircle cx='134' cy='246' r='8'/%3E%3Cpath d='M240 60 C250 48 268 52 270 66 C272 80 258 90 244 84'/%3E%3Cpath d='M110 130 C96 118 100 96 120 92 C124 110 122 122 110 130 Z'/%3E%3C/g%3E%3C/svg%3E");
+            background-size: 280px 280px;
+            animation: drift 60s linear infinite;
+        }
+        @keyframes drift {
+            from { background-position: 0 0; }
+            to   { background-position: 560px 280px; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .watermark-layer { animation: none; }
+        }
+        /* Disease symbol color variants */
+        .icon-a { background-color: #d8f3e6; color: #14805e; }
+        .icon-b { background-color: #faf0da; color: #b8862e; }
+        .icon-c { background-color: #e7eff3; color: #3a7ca5; }
+        .icon-d { background-color: #fdeceb; color: #c65f56; }
+
+        /* Book an Appointment button — always visible, hover or not */
+        .btn-book {
+            background-color: #fbedcf;
+            color: #0e3b2e;
+            border: 2px solid #e8b04b;
+        }
+        .btn-book:hover, .btn-book:active {
+            background-color: #e8b04b;
+            color: #0e3b2e;
+        }
+        /* Call button — light blue with dark blue outline */
+        .btn-call {
+            background-color: #ddecf8;
+            color: #14507e;
+            border: 2px solid #14507e;
+        }
+        .btn-call:hover, .btn-call:active {
+            background-color: #c4e0f4;
+            color: #14507e;
+        }
+        /* WhatsApp button — dark green outline ring */
+        .btn-wa-ring {
+            border: 2px solid #0e6e4f;
+        }
+        /* WhatsApp button — light green with dark green outline */
+        .btn-wa-light {
+            background-color: #d9f5e3;
+            color: #0e6e4f;
+            border: 2px solid #0e6e4f;
+        }
+        .btn-wa-light:hover, .btn-wa-light:active {
+            background-color: #bfeed1;
+            color: #0e6e4f;
         }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body>
 
     <!-- Header -->
-    <header class="bg-white shadow-md sticky top-0 z-50">
-        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="text-2xl font-bold text-green-800 font-lora">Jayaa Tharsini Homoeo Clinic</a>
-            <div class="hidden md:flex space-x-6">
-                <a href="#about" class="text-gray-600 hover:text-green-700 transition duration-300">About Us</a>
-                <a href="#services" class="text-gray-600 hover:text-green-700 transition duration-300">Services</a>
-                <a href="#testimonials" class="text-gray-600 hover:text-green-700 transition duration-300">Testimonials</a>
-                <a href="#contact" class="text-gray-600 hover:text-green-700 transition duration-300">Contact</a>
+    <header class="glass shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-4 md:px-6 py-3 flex justify-between items-center gap-2">
+            <a href="#" class="flex items-center gap-2">
+                <!-- Leaf-drop logo mark -->
+                <svg class="w-9 h-9 flex-shrink-0" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+                    <path d="M24 4C24 4 10 18 10 30a14 14 0 0028 0C38 18 24 4 24 4z" fill="#14805e"/>
+                    <path d="M24 14c0 0-7 8-7 15a7 7 0 0014 0c0-7-7-15-7-15z" fill="#d8f3e6"/>
+                    <path d="M24 22v14" stroke="#0e3b2e" stroke-width="2" stroke-linecap="round"/>
+                    <path d="M24 28c3-1 5-3 5.5-6M24 32c-3-1-5-3-5.5-6" stroke="#0e3b2e" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <span class="font-display font-semibold text-forest text-base md:text-xl leading-tight">Jayaa Tharsini<br class="sm:hidden"><span class="hidden sm:inline"> </span>Homoeo Clinic</span>
+            </a>
+            <div class="hidden md:flex items-center gap-7 text-sm font-semibold text-gray-600">
+                <a href="#about" class="hover:text-emeraldx transition">About</a>
+                <a href="#services" class="hover:text-emeraldx transition">Treatments</a>
+                <a href="#timings" class="hover:text-emeraldx transition">Timings</a>
+                <a href="#testimonials" class="hover:text-emeraldx transition">Stories</a>
+                <a href="#contact" class="hover:text-emeraldx transition">Contact</a>
             </div>
-            <a href="#appointment" class="hidden md:inline-block bg-green-600 text-white px-4 py-2 rounded-full hover:bg-green-700 transition duration-300">Book Appointment</a>
-            <button id="mobile-menu-button" class="md:hidden focus:outline-none">
-                <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-            </button>
+            <div class="flex items-center gap-2">
+                <a href="tel:+919894686664" onclick="trackConversion('phone_call_click', ADS_LABEL_CALL)"
+                   class="btn-press btn-call inline-flex items-center px-4 py-2.5 rounded-full font-bold text-sm md:text-base whitespace-nowrap transition shadow-md">
+                    <svg class="w-4 h-4 mr-1.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3.5A1.5 1.5 0 013.5 2h1.148a1.5 1.5 0 011.465 1.175l.716 3.223a1.5 1.5 0 01-1.052 1.767l-.933.267c-.41.117-.643.555-.48.95a11.542 11.542 0 006.254 6.254c.395.163.833-.07.95-.48l.267-.933a1.5 1.5 0 011.767-1.052l3.223.716A1.5 1.5 0 0118 15.352V16.5a1.5 1.5 0 01-1.5 1.5H15c-1.149 0-2.263-.15-3.326-.43A13.022 13.022 0 012.43 8.326 13.019 13.019 0 012 5V3.5z"/></svg>
+                    Call Now
+                </a>
+                <button id="mobile-menu-button" aria-label="Open menu" class="md:hidden p-2">
+                    <svg class="w-6 h-6 text-forest" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></svg>
+                </button>
+            </div>
         </nav>
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden px-6 pt-2 pb-4">
-            <a href="#about" class="block py-2 text-gray-600 hover:text-green-700">About Us</a>
-            <a href="#services" class="block py-2 text-gray-600 hover:text-green-700">Services</a>
-            <a href="#testimonials" class="block py-2 text-gray-600 hover:text-green-700">Testimonials</a>
-            <a href="#contact" class="block py-2 text-gray-600 hover:text-green-700">Contact</a>
-            <a href="#appointment" class="block mt-2 bg-green-600 text-white text-center px-4 py-2 rounded-full hover:bg-green-700">Book Appointment</a>
+        <div id="mobile-menu" class="hidden md:hidden px-6 pt-2 pb-4 border-t border-emerald-900/10 font-semibold text-gray-700">
+            <a href="#about" class="block py-3">About</a>
+            <a href="#services" class="block py-3">Treatments</a>
+            <a href="#timings" class="block py-3">Timings</a>
+            <a href="#testimonials" class="block py-3">Patient Stories</a>
+            <a href="#contact" class="block py-3">Contact</a>
         </div>
     </header>
 
     <main>
-        <!-- Hero Section -->
-        <section class="hero-bg py-20 md:py-32">
-            <div class="container mx-auto px-6 text-center">
-                <h1 class="text-4xl md:text-6xl font-bold text-green-900 font-lora mb-4">Your Path to Natural & Lasting Health</h1>
-                <p class="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto mb-8">Experience compassionate care and effective homeopathic treatments for a healthier, more vibrant you.</p>
-                <a href="#appointment" class="bg-green-700 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-green-800 transition duration-300 shadow-lg">Book an Appointment</a>
+        <!-- ============ HERO ============ -->
+        <section class="hero-mesh relative overflow-hidden">
+            <div class="watermark-layer" aria-hidden="true"></div>
+            <div class="container mx-auto px-4 md:px-6 pt-6 pb-12 md:pt-10 md:pb-16">
+                <div class="flex flex-col lg:flex-row items-center gap-10 lg:gap-6">
+                    <!-- Copy -->
+                    <div class="lg:w-[55%] text-center lg:text-left relative z-10">
+                        <p class="inline-flex items-center gap-2 bg-white/80 border border-emerald-900/10 text-forest font-bold px-4 py-1.5 rounded-full text-xs md:text-sm mb-4 shadow-sm">
+                            <span class="w-2 h-2 rounded-full bg-emeraldx"></span>
+                            Nolambur, Chennai &nbsp;&bull;&nbsp; 25+ Years of Healing
+                        </p>
+                        <h1 id="hero-h1" class="font-display font-semibold text-forest text-4xl md:text-6xl leading-[1.08] mb-4">
+                            Heal gently. <span class="italic text-emeraldx">Naturally.</span><br>
+                            For your family.
+                        </h1>
+                        <p class="text-base md:text-lg text-gray-600 max-w-xl mx-auto lg:mx-0 mb-6">
+                            Personalised homeopathic treatment that works on the root cause of your condition — guided by <strong class="text-forest">Dr. Swarnalatha</strong>, BHMS, MSc(Psy), trusted by families across Chennai for over 25 years.
+                        </p>
+                        <div class="w-full sm:w-fit mx-auto lg:mx-0 flex flex-col items-stretch sm:items-center gap-3 max-w-md sm:max-w-none">
+                            <div class="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
+                                <a href="https://wa.me/919894686664?text=Hello%20Doctor%2C%20I%20would%20like%20to%20book%20an%20appointment."
+                                   target="_blank" rel="noopener" onclick="trackConversion('whatsapp_click', ADS_LABEL_WHATSAPP)"
+                                   class="btn-press btn-wa-light w-full sm:w-auto inline-flex items-center justify-center px-6 md:px-8 py-4 rounded-full text-base md:text-lg font-bold transition shadow-lg whitespace-nowrap">
+                                    <svg class="w-5 h-5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                                    WhatsApp Us
+                                </a>
+                                <a href="#appointment" onclick="trackConversion('book_appointment_click', ADS_LABEL_BOOKING)"
+                                   class="btn-press btn-book w-full sm:w-auto inline-flex items-center justify-center px-6 md:px-8 py-4 rounded-full text-base md:text-lg font-bold transition shadow-md whitespace-nowrap">
+                                    <svg class="w-5 h-5 mr-2 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="3"/><path d="M16 2v4M8 2v4M3 10h18M9 16l2 2 4-4"/></svg>
+                                    Book an Appointment
+                                </a>
+                            </div>
+                            <a href="tel:+919894686664" onclick="trackConversion('phone_call_click', ADS_LABEL_CALL)"
+                               class="btn-press btn-call w-full sm:w-auto inline-flex items-center justify-center px-6 md:px-8 py-4 rounded-full text-base md:text-lg font-bold transition shadow-lg whitespace-nowrap">
+                                <svg class="w-5 h-5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3.5A1.5 1.5 0 013.5 2h1.148a1.5 1.5 0 011.465 1.175l.716 3.223a1.5 1.5 0 01-1.052 1.767l-.933.267c-.41.117-.643.555-.48.95a11.542 11.542 0 006.254 6.254c.395.163.833-.07.95-.48l.267-.933a1.5 1.5 0 011.767-1.052l3.223.716A1.5 1.5 0 0118 15.352V16.5a1.5 1.5 0 01-1.5 1.5H15c-1.149 0-2.263-.15-3.326-.43A13.022 13.022 0 012.43 8.326 13.019 13.019 0 012 5V3.5z"/></svg>
+                                Call: 98946 86664
+                            </a>
+                        </div>
+                        <div id="hero-status" class="mt-5 text-sm font-bold"></div>
+                        <!-- Trust chips -->
+                        <div class="flex flex-wrap justify-center lg:justify-start gap-2 mt-7 text-xs md:text-sm font-semibold text-forest">
+                            <span class="bg-white/70 border border-emerald-900/10 px-3 py-1.5 rounded-full">✓ No side effects</span>
+                            <span class="bg-white/70 border border-emerald-900/10 px-3 py-1.5 rounded-full">✓ Safe for children</span>
+                            <span class="bg-white/70 border border-emerald-900/10 px-3 py-1.5 rounded-full">✓ Online consultation</span>
+                        </div>
+                    </div>
+
+                    <!-- Hero: doctor's photo framed by botanicals -->
+                    <div class="lg:w-[45%] relative flex justify-center">
+                        <div class="relative w-72 h-72 md:w-96 md:h-96 flex items-center justify-center">
+                            <!-- decorative botanical frame behind the photo -->
+                            <svg viewBox="0 0 420 420" class="absolute inset-0 w-full h-full" aria-hidden="true">
+                                <circle cx="210" cy="210" r="195" fill="#d8f3e6" opacity="0.7"/>
+                                <circle cx="210" cy="210" r="160" fill="#ffffff" opacity="0.55"/>
+                                <!-- leaf left -->
+                                <g class="floaty-slow" style="transform-origin: 60px 220px;">
+                                    <path d="M62 310 C15 250, 28 160, 92 118 C107 190, 102 265, 62 310 Z" fill="#14805e"/>
+                                    <path d="M69 295 C69 295, 72 200, 88 133" stroke="#d8f3e6" stroke-width="3" fill="none" stroke-linecap="round"/>
+                                </g>
+                                <!-- leaf right -->
+                                <g class="floaty" style="transform-origin: 360px 210px;">
+                                    <path d="M358 300 C412 245, 402 150, 333 115 C321 190, 325 260, 358 300 Z" fill="#0e3b2e"/>
+                                    <path d="M351 285 C351 285, 343 195, 335 130" stroke="#e8b04b" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.8"/>
+                                </g>
+                                <!-- drop -->
+                                <g class="floaty">
+                                    <path d="M300 62 C300 62 287 78 287 88 a13 13 0 0026 0 C313 78 300 62 300 62z" fill="#14805e" opacity="0.9"/>
+                                </g>
+                                <!-- globule pills -->
+                                <circle cx="140" cy="368" r="9" fill="#ffffff" stroke="#c9d8d0" stroke-width="2"/>
+                                <circle cx="164" cy="378" r="9" fill="#ffffff" stroke="#c9d8d0" stroke-width="2"/>
+                                <circle cx="190" cy="382" r="8" fill="#ffffff" stroke="#c9d8d0" stroke-width="2"/>
+                                <!-- sparkles -->
+                                <g fill="#e8b04b">
+                                    <path d="M105 65 l3 8 8 3 -8 3 -3 8 -3 -8 -8 -3 8 -3z"/>
+                                    <path d="M330 370 l2.5 6.5 6.5 2.5 -6.5 2.5 -2.5 6.5 -2.5 -6.5 -6.5 -2.5 6.5 -2.5z"/>
+                                    <circle cx="370" cy="75" r="4"/>
+                                    <circle cx="55" cy="365" r="4" opacity="0.7"/>
+                                </g>
+                            </svg>
+                            <!--
+                                IMAGE INSTRUCTION: keep the doctor's photo saved as 'photo.jpg'
+                                in the same folder as this index.html file.
+                            -->
+                            <img src="photo.jpg" alt="Dr. Swarnalatha, Homeopathy Doctor in Nolambur, Chennai" width="320" height="320"
+                                 onerror="this.style.color='transparent'; this.style.backgroundColor='#d8f3e6';"
+                                 class="relative z-10 rounded-full w-52 h-52 md:w-72 md:h-72 object-cover border-[6px] border-white shadow-2xl shadow-emerald-900/25 bg-mint">
+                            <!-- stethoscope emblem badge -->
+                            <div class="absolute z-20 top-6 right-6 md:top-8 md:right-10 bg-white rounded-full p-2.5 md:p-3 shadow-lg border border-emerald-900/10">
+                                <svg class="w-7 h-7 md:w-9 md:h-9" viewBox="0 0 24 24" fill="none" stroke="#0e3b2e" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <path d="M4.5 3.5 L4.5 8.5 a4.5 4.5 0 009 0 L13.5 3.5"/>
+                                    <path d="M3.5 3.5 h2 M12.5 3.5 h2"/>
+                                    <path d="M9 13 v3.5 a5 5 0 0010 0 V14.8"/>
+                                    <circle cx="19" cy="12" r="2.8" stroke="#e8b04b"/>
+                                    <circle cx="19" cy="12" r="1" fill="#e8b04b" stroke="none"/>
+                                </svg>
+                            </div>
+                            <!-- name badge on the photo -->
+                            <div class="absolute z-20 bottom-4 md:bottom-8 left-1/2 -translate-x-1/2 bg-mint text-forest border-2 border-white text-xs md:text-sm font-bold px-4 py-2 rounded-full shadow-lg whitespace-nowrap">
+                                Dr. Swarnalatha &bull; BHMS, MSc(Psy)
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+            <!-- wavy divider -->
+            <svg class="block w-full text-white" viewBox="0 0 1440 60" preserveAspectRatio="none" fill="currentColor" aria-hidden="true">
+                <path d="M0,32 C240,60 480,0 720,20 C960,40 1200,58 1440,24 L1440,60 L0,60 Z"/>
+            </svg>
         </section>
 
-        <!-- About Section -->
-        <section id="about" class="py-20 bg-white">
-            <div class="container mx-auto px-6">
-                <div class="flex flex-col md:flex-row items-center gap-12">
-                    <div class="md:w-1/3 text-center">
-                        <!-- 
-                            IMAGE INSTRUCTION:
-                            For this image to show up, save the doctor's photo as 'photo.jpg' 
-                            in the same folder as this 'index.html' file.
-                        -->
-                        <img src="photo.jpg" alt="Dr. Swarnalatha" class="rounded-full w-64 h-64 object-cover mx-auto shadow-xl border-4 border-white bg-gray-200">
-                        <h3 class="text-3xl font-bold mt-6 text-green-800 font-lora">Dr. Swarnalatha</h3>
-                        <p class="text-gray-500">BHMS, MSc(Psy)</p>
-                    </div>
-                    <div class="md:w-2/3">
-                        <h2 class="section-title text-4xl text-green-900 mb-6">A Commitment to Holistic Healing</h2>
-                        <p class="text-lg text-gray-600 mb-4">
+        <!-- ============ ABOUT ============ -->
+        <section id="about" class="py-14 md:py-20 bg-white">
+            <div class="container mx-auto px-4 md:px-6">
+                <div class="flex flex-col md:flex-row items-center gap-10 md:gap-14">
+                    <div class="md:w-3/5 reveal">
+                        <p class="text-emeraldx font-bold uppercase tracking-widest text-xs mb-3">About the clinic</p>
+                        <h2 class="font-display text-3xl md:text-[2.6rem] font-semibold text-forest leading-tight mb-3">A commitment to holistic healing</h2>
+                        <p class="text-gray-500 font-medium mb-6">Dr. Swarnalatha &bull; BHMS, MSc(Psy) &bull; <span class="text-emeraldx font-bold">25+ Years of Practice</span></p>
+                        <p class="text-base md:text-lg text-gray-600 mb-4">
                             With over 25 years of dedicated professional practice, Dr. Swarnalatha has witnessed firsthand the profound ability of homeopathy to guide individuals toward recovery from a wide spectrum of acute and chronic illnesses.
                         </p>
-                        <p class="text-lg text-gray-600 mb-6">
-                            An increasing number of people are discovering the remarkable effects of homeopathic treatment in restoring their health, vitality, and overall well-being. At Jayaa Tharsini Homoeo Clinic, we are committed to providing personalized care that addresses the root cause of your health concerns, promoting gentle and lasting healing.
+                        <p class="text-base md:text-lg text-gray-600 mb-6">
+                            More and more people are discovering the effects of homeopathic treatment in restoring their health, vitality, and overall well-being. At Jayaa Tharsini Homoeo Clinic, we provide personalized care that addresses the root cause of your health concerns — gentle, natural, and lasting.
                         </p>
-                        <div class="bg-green-50 border-l-4 border-green-500 p-4 rounded-r-lg">
-                            <p class="text-gray-700 font-medium">"My mission is to empower patients on their journey to wellness through safe, natural, and effective homeopathic solutions." - Dr. Swarnalatha</p>
+                        <div class="bg-mint/60 border-l-4 border-emeraldx p-5 rounded-r-2xl">
+                            <p class="text-forest font-medium font-display italic text-lg">"My mission is to empower patients on their journey to wellness through safe, natural, and effective homeopathic solutions."</p>
+                            <p class="text-emeraldx font-bold mt-2 text-sm">— Dr. Swarnalatha</p>
+                        </div>
+                    </div>
+                    <!-- Doctor-patient consultation illustration -->
+                    <div class="md:w-2/5 flex justify-center reveal">
+                        <svg viewBox="0 0 420 380" class="w-72 md:w-full max-w-sm" role="img" aria-label="Illustration of a doctor consulting a patient">
+                            <circle cx="210" cy="190" r="165" fill="#d8f3e6" opacity="0.65"/>
+                            <!-- floor shadow -->
+                            <ellipse cx="210" cy="330" rx="140" ry="14" fill="#0e3b2e" opacity="0.07"/>
+
+                            <!-- DOCTOR (left, facing right) -->
+                            <g>
+                                <!-- hair back bun -->
+                                <circle cx="106" cy="96" r="12" fill="#2e2a28"/>
+                                <!-- head -->
+                                <circle cx="130" cy="102" r="26" fill="#c98a5e"/>
+                                <!-- hair front -->
+                                <path d="M104 100 a26 26 0 0152 -2 c-6 -16 -14 -22 -26 -22 s-22 8 -26 24z" fill="#2e2a28"/>
+                                <!-- neck -->
+                                <rect x="122" y="124" width="16" height="12" fill="#c98a5e"/>
+                                <!-- white coat -->
+                                <path d="M96 138 C110 132 150 132 164 138 L174 310 L86 310 Z" fill="#ffffff" stroke="#e3ece7" stroke-width="2"/>
+                                <!-- inner dress -->
+                                <path d="M118 136 L130 152 L142 136 L142 176 L118 176 Z" fill="#c65f56"/>
+                                <!-- coat lapels -->
+                                <path d="M118 136 L130 152 L122 168 L112 142 Z M142 136 L130 152 L138 168 L148 142 Z" fill="#f4f7f5"/>
+                                <!-- stethoscope -->
+                                <path d="M120 140 C118 168 126 186 140 190" fill="none" stroke="#0e3b2e" stroke-width="4" stroke-linecap="round"/>
+                                <circle cx="146" cy="192" r="8" fill="#e8b04b" stroke="#0e3b2e" stroke-width="2.5"/>
+                                <!-- arm extended with clipboard -->
+                                <path d="M160 160 L196 190" stroke="#ffffff" stroke-width="16" stroke-linecap="round"/>
+                                <path d="M160 160 L196 190" stroke="#e3ece7" stroke-width="16" stroke-linecap="round" opacity="0.3"/>
+                                <circle cx="200" cy="193" r="7" fill="#c98a5e"/>
+                                <!-- clipboard -->
+                                <rect x="188" y="168" width="36" height="48" rx="5" fill="#fbf9f4" stroke="#d5cfc2" stroke-width="2" transform="rotate(8 206 192)"/>
+                                <path d="M196 184 h20 M196 194 h20 M196 204 h14" stroke="#c9d8d0" stroke-width="3" stroke-linecap="round" transform="rotate(8 206 192)"/>
+                            </g>
+
+                            <!-- PATIENT: mother with child (right, facing left) -->
+                            <g>
+                                <!-- mother head -->
+                                <circle cx="296" cy="112" r="24" fill="#b5713f"/>
+                                <!-- mother hair -->
+                                <path d="M272 110 a24 24 0 0148 0 c0 -18 -10 -28 -24 -28 s-24 10 -24 28z" fill="#241f1d"/>
+                                <path d="M318 106 c6 14 6 34 2 46 l-8 -4 c4 -12 5 -30 6 -42z" fill="#241f1d"/>
+                                <!-- neck -->
+                                <rect x="288" y="132" width="16" height="12" fill="#b5713f"/>
+                                <!-- mother sari body -->
+                                <path d="M262 146 C276 140 316 140 330 146 L342 310 L252 310 Z" fill="#d9776b"/>
+                                <path d="M262 146 C276 140 316 140 330 146 L336 220 C310 228 282 228 258 220 Z" fill="#c65f56"/>
+                                <!-- sari drape -->
+                                <path d="M296 144 C288 190 288 250 284 308 L266 308 C270 250 274 190 280 146 Z" fill="#e8b04b" opacity="0.85"/>
+                                <!-- mother arm around child -->
+                                <path d="M268 170 C254 200 250 230 254 252" stroke="#d9776b" stroke-width="15" fill="none" stroke-linecap="round"/>
+                                <!-- child -->
+                                <circle cx="244" cy="238" r="16" fill="#c98a5e"/>
+                                <path d="M228 236 a16 16 0 0132 0 c-2 -12 -8 -18 -16 -18 s-14 6 -16 18z" fill="#2e2a28"/>
+                                <path d="M232 254 C236 250 252 250 256 254 L260 310 L228 310 Z" fill="#3a7ca5"/>
+                                <circle cx="240" cy="270" r="2.4" fill="#ffffff"/>
+                                <circle cx="248" cy="270" r="2.4" fill="#ffffff"/>
+                            </g>
+
+                            <!-- floating heart + plus between them -->
+                            <g class="floaty">
+                                <path d="M210 96 c-4 -8 -16 -6 -16 3 c0 7 9 12 16 17 c7 -5 16 -10 16 -17 c0 -9 -12 -11 -16 -3z" fill="#c65f56" opacity="0.9"/>
+                            </g>
+                            <g fill="#e8b04b">
+                                <path d="M236 62 l2.5 6.5 6.5 2.5 -6.5 2.5 -2.5 6.5 -2.5 -6.5 -6.5 -2.5 6.5 -2.5z"/>
+                                <circle cx="352" cy="88" r="4" opacity="0.8"/>
+                                <circle cx="70" cy="220" r="4" opacity="0.6"/>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ SERVICES ============ -->
+        <section id="services" class="py-14 md:py-20 bg-cream relative overflow-hidden">
+            <div class="watermark-layer" aria-hidden="true"></div>
+            <!-- faint background leaf -->
+            <svg class="absolute -right-24 -top-24 w-96 h-96 opacity-[0.06] text-forest" viewBox="0 0 100 100" fill="currentColor" aria-hidden="true">
+                <path d="M50 5 C20 35 15 70 50 95 C85 70 80 35 50 5 Z"/>
+            </svg>
+            <div class="container mx-auto px-4 md:px-6 relative">
+                <div class="text-center max-w-2xl mx-auto mb-10 md:mb-14 reveal">
+                    <p class="text-emeraldx font-bold uppercase tracking-widest text-xs mb-3">What we treat</p>
+                    <h2 class="font-display text-3xl md:text-[2.6rem] font-semibold text-forest leading-tight">Specialty treatments</h2>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-7">
+
+                    <div class="blob-card bg-white p-7 shadow-lg shadow-emerald-900/5 reveal">
+                        <div class="w-14 h-14 rounded-2xl icon-a flex items-center justify-center mb-4">
+                            <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M8 4c-3 0-4.5 2.5-4.5 5 0 3 2 4 2 7 0 2.5 1.5 4 3.5 4 1.5 0 2.5-1 2.5-2.5v-11C11.5 5 10 4 8 4z"/><circle cx="16.5" cy="9" r="1.2" fill="currentColor"/><circle cx="18.5" cy="13" r="1.2" fill="currentColor"/><circle cx="15.5" cy="16" r="1.2" fill="currentColor"/></svg>
+                        </div>
+                        <h3 class="font-display text-xl font-semibold text-forest mb-2">Kidney Stones</h3>
+                        <p class="text-gray-600 text-[15px]">Non-invasive, gentle treatment to help dissolve and pass kidney stones, preventing recurrence.</p>
+                    </div>
+
+                    <div class="blob-card bg-white p-7 shadow-lg shadow-emerald-900/5 reveal">
+                        <div class="w-14 h-14 rounded-2xl icon-b flex items-center justify-center mb-4">
+                            <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8 C9 4 4 4 3 8 c-1 4 3 7 9 8 M12 8 c3-4 8-4 9 0 1 4-3 7-9 8 M12 8 v9"/></svg>
+                        </div>
+                        <h3 class="font-display text-xl font-semibold text-forest mb-2">Thyroid Disorders</h3>
+                        <p class="text-gray-600 text-[15px]">Balancing thyroid function naturally to regulate metabolism and improve energy levels.</p>
+                    </div>
+
+                    <div class="blob-card bg-white p-7 shadow-lg shadow-emerald-900/5 reveal">
+                        <div class="w-14 h-14 rounded-2xl icon-c flex items-center justify-center mb-4">
+                            <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8 8 0 019.5 4 8 8 0 1020 14.5z"/><path d="M6 6 l.8 2 .8-2M4 11 l.7 1.6 .7-1.6" stroke-width="1.4"/></svg>
+                        </div>
+                        <h3 class="font-display text-xl font-semibold text-forest mb-2">Sleep Disorders</h3>
+                        <p class="text-gray-600 text-[15px]">Restoring natural sleep cycles for conditions like insomnia — restful, rejuvenating sleep.</p>
+                    </div>
+
+                    <div class="blob-card bg-white p-7 shadow-lg shadow-emerald-900/5 reveal">
+                        <div class="w-14 h-14 rounded-2xl icon-d flex items-center justify-center mb-4">
+                            <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 3v2M12 19v2M3 12h2M19 12h2M5.6 5.6l1.4 1.4M17 17l1.4 1.4M18.4 5.6L17 7M7 17l-1.4 1.4"/></svg>
+                        </div>
+                        <h3 class="font-display text-xl font-semibold text-forest mb-2">Leukoderma (Vitiligo)</h3>
+                        <p class="text-gray-600 text-[15px]">Stimulating natural re-pigmentation and managing the spread of white patches on the skin.</p>
+                    </div>
+
+                    <div class="blob-card bg-white p-7 shadow-lg shadow-emerald-900/5 reveal">
+                        <div class="w-14 h-14 rounded-2xl icon-a flex items-center justify-center mb-4">
+                            <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21 C7 17 4 13.5 4 9.5 A4.5 4.5 0 0112 6.5 4.5 4.5 0 0120 9.5 C20 13.5 17 17 12 21z"/><path d="M9 11 c1 1 5 1 6 0" stroke-width="1.4"/></svg>
+                        </div>
+                        <h3 class="font-display text-xl font-semibold text-forest mb-2">Eczema &amp; Skin Ailments</h3>
+                        <p class="text-gray-600 text-[15px]">Soothing skin inflammation and addressing the internal triggers of eczema for long-term relief.</p>
+                    </div>
+
+                    <div class="blob-card bg-white p-7 shadow-lg shadow-emerald-900/5 reveal">
+                        <div class="w-14 h-14 rounded-2xl icon-b flex items-center justify-center mb-4">
+                            <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="8" r="3.2"/><path d="M6.5 20 c0-3 2.3-5 5.5-5 s5.5 2 5.5 5"/><path d="M16.8 5.5 a4.5 4.5 0 010 5M19 4 a7 7 0 010 8" stroke-width="1.4"/></svg>
+                        </div>
+                        <h3 class="font-display text-xl font-semibold text-forest mb-2">Child Care</h3>
+                        <p class="text-gray-600 text-[15px]">Gentle, safe remedies for common childhood illnesses — boosting immunity and overall health.</p>
+                    </div>
+
+                    <div class="blob-card bg-white p-7 shadow-lg shadow-emerald-900/5 reveal">
+                        <div class="w-14 h-14 rounded-2xl icon-c flex items-center justify-center mb-4">
+                            <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 13 a3.5 3.5 0 100-7 3.5 3.5 0 000 7z"/><path d="M12 13 c-2 0-3 1.5-3 3 a3 3 0 006 0 c0-1.5-1-3-3-3z M12 6 c0-1.5 1-3 3-3 M12 6 c0-1.5-1-3-3-3"/></svg>
+                        </div>
+                        <h3 class="font-display text-xl font-semibold text-forest mb-2">Women's Health</h3>
+                        <p class="text-gray-600 text-[15px]">Effective management of menstrual irregularities and menopausal problems.</p>
+                    </div>
+
+                    <div class="blob-card bg-white p-7 shadow-lg shadow-emerald-900/5 reveal">
+                        <div class="w-14 h-14 rounded-2xl icon-d flex items-center justify-center mb-4">
+                            <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M6 20 c0-6 1-12 6-14 M12 20 c0-5 .5-10 4-12 M9 20 c0-4 .5-8 3-10"/></svg>
+                        </div>
+                        <h3 class="font-display text-xl font-semibold text-forest mb-2">Hair Loss</h3>
+                        <p class="text-gray-600 text-[15px]">Addressing root causes like hormonal imbalance and stress to reduce hair fall and promote growth.</p>
+                    </div>
+
+                    <div class="blob-card bg-white p-7 shadow-lg shadow-emerald-900/5 reveal">
+                        <div class="w-14 h-14 rounded-2xl icon-a flex items-center justify-center mb-4">
+                            <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="10" r="6"/><path d="M9 9 c.8-.8 2-.8 2.8 0 M13 9 c.8-.8 2-.8 2.8 0" stroke-width="1.4"/><path d="M8.5 20 h7 M10 22 h4"/></svg>
+                        </div>
+                        <h3 class="font-display text-xl font-semibold text-forest mb-2">Migraine, Piles &amp; Acidity</h3>
+                        <p class="text-gray-600 text-[15px]">Relief from chronic conditions like migraines, piles, and acidity through holistic treatment.</p>
+                    </div>
+                </div>
+
+                <div class="text-center mt-10 reveal">
+                    <a href="https://wa.me/919894686664?text=Hello%20Doctor%2C%20I%20want%20to%20consult%20about%20a%20health%20problem."
+                       target="_blank" rel="noopener" onclick="trackConversion('whatsapp_click', ADS_LABEL_WHATSAPP)"
+                       class="btn-press inline-flex items-center justify-center bg-wa text-white px-7 py-3.5 rounded-full font-bold shadow-lg shadow-green-500/25">
+                        Ask about your condition on WhatsApp →
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ TIMINGS ============ -->
+        <section id="timings" class="py-14 md:py-20 bg-forest relative overflow-hidden">
+            <svg class="absolute left-0 bottom-0 w-72 h-72 opacity-[0.07] text-white" viewBox="0 0 100 100" fill="currentColor" aria-hidden="true">
+                <path d="M50 5 C20 35 15 70 50 95 C85 70 80 35 50 5 Z"/>
+            </svg>
+            <div class="container mx-auto px-4 md:px-6 relative">
+                <div class="text-center max-w-2xl mx-auto mb-10 md:mb-14 reveal">
+                    <p class="text-gold font-bold uppercase tracking-widest text-xs mb-3">Visit or connect online</p>
+                    <h2 class="font-display text-3xl md:text-[2.6rem] font-semibold text-white leading-tight">Clinic hours</h2>
+                </div>
+                <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+                    <div class="bg-white/[0.07] backdrop-blur border border-white/15 p-7 rounded-3xl reveal">
+                        <h3 class="font-display text-2xl font-semibold text-white mb-3 text-center">In-Clinic Consultation</h3>
+                        <div id="clinic-status" class="text-center mb-4 font-bold"></div>
+                        <table class="w-full text-left text-emerald-50/90">
+                            <tbody>
+                                <tr class="border-b border-white/10"><td class="py-2.5 font-medium">Monday – Saturday</td><td class="py-2.5 text-right">11:00 AM – 1:00 PM</td></tr>
+                                <tr class="border-b border-white/10"><td class="py-2.5 font-medium">Monday – Saturday</td><td class="py-2.5 text-right">6:00 PM – 8:30 PM</td></tr>
+                                <tr><td class="py-2.5 font-medium">Sunday</td><td class="py-2.5 text-right text-amber-200">On Appointment</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="bg-white/[0.07] backdrop-blur border border-white/15 p-7 rounded-3xl reveal">
+                        <h3 class="font-display text-2xl font-semibold text-white mb-3 text-center">Online Consultation</h3>
+                        <div id="online-status" class="text-center mb-4 font-bold"></div>
+                        <table class="w-full text-left text-emerald-50/90">
+                            <tbody>
+                                <tr class="border-b border-white/10"><td class="py-2.5 font-medium">Monday – Saturday</td><td class="py-2.5 text-right">8:00 AM – 9:00 PM</td></tr>
+                                <tr><td class="py-2.5 font-medium">Sunday</td><td class="py-2.5 text-right text-amber-200">Limited Availability</td></tr>
+                            </tbody>
+                        </table>
+                        <a href="https://wa.me/919894686664?text=Hello%20Doctor%2C%20I%20would%20like%20an%20online%20consultation."
+                           target="_blank" rel="noopener" onclick="trackConversion('whatsapp_click', ADS_LABEL_WHATSAPP)"
+                           class="btn-press mt-5 inline-flex w-full items-center justify-center bg-wa text-white px-4 py-3.5 rounded-2xl font-bold">
+                            Book online consultation on WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ TESTIMONIALS ============ -->
+        <section id="testimonials" class="py-14 md:py-20 bg-white">
+            <div class="container mx-auto px-4 md:px-6">
+                <div class="text-center max-w-2xl mx-auto mb-10 md:mb-14 reveal">
+                    <p class="text-emeraldx font-bold uppercase tracking-widest text-xs mb-3">Patient stories</p>
+                    <h2 class="font-display text-3xl md:text-[2.6rem] font-semibold text-forest leading-tight">What our patients say</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-7">
+                    <div class="blob-card bg-cream p-7 border border-emerald-900/5 reveal">
+                        <div class="text-gold text-lg mb-3" aria-label="5 star rating">★★★★★</div>
+                        <p class="text-gray-600 italic mb-5">"Dr. Swarnalatha's treatment for my chronic migraine has been life-changing. I haven't felt this good in years. Her approach is so caring and thorough."</p>
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-full bg-mint flex items-center justify-center font-bold text-forest">P</div>
+                            <div><p class="font-bold text-forest text-sm">Priya S.</p><p class="text-xs text-gray-500">Migraine treatment</p></div>
+                        </div>
+                    </div>
+                    <div class="blob-card bg-cream p-7 border border-emerald-900/5 reveal">
+                        <div class="text-gold text-lg mb-3" aria-label="5 star rating">★★★★★</div>
+                        <p class="text-gray-600 italic mb-5">"My son's recurring eczema has completely cleared up after consulting at this clinic. The medicines are gentle and so effective. Highly recommended for child care."</p>
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-full bg-mint flex items-center justify-center font-bold text-forest">A</div>
+                            <div><p class="font-bold text-forest text-sm">Anand K.</p><p class="text-xs text-gray-500">Child skin care</p></div>
+                        </div>
+                    </div>
+                    <div class="blob-card bg-cream p-7 border border-emerald-900/5 reveal">
+                        <div class="text-gold text-lg mb-3" aria-label="5 star rating">★★★★★</div>
+                        <p class="text-gray-600 italic mb-5">"I was suffering from severe acidity and piles. The homeopathic treatment provided immense relief without any side effects. Thank you, Doctor!"</p>
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-full bg-mint flex items-center justify-center font-bold text-forest">R</div>
+                            <div><p class="font-bold text-forest text-sm">Rajeshwari M.</p><p class="text-xs text-gray-500">Acidity &amp; piles</p></div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Services Section -->
-        <section id="services" class="py-20">
-            <div class="container mx-auto px-6">
-                <h2 class="section-title text-4xl text-center text-green-900 mb-12">Specialty Treatments</h2>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Service Card -->
-                    <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-                        <h3 class="text-xl font-bold text-green-800 mb-3">Kidney Stones</h3>
-                        <p class="text-gray-600">Non-invasive, gentle treatment to help dissolve and pass kidney stones, preventing recurrence.</p>
-                    </div>
-                    <!-- Service Card -->
-                    <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-                        <h3 class="text-xl font-bold text-green-800 mb-3">Thyroid Disorders</h3>
-                        <p class="text-gray-600">Balancing thyroid function naturally to regulate metabolism and improve energy levels.</p>
-                    </div>
-                    <!-- Service Card -->
-                    <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-                        <h3 class="text-xl font-bold text-green-800 mb-3">Sleep Disorders</h3>
-                        <p class="text-gray-600">Restoring natural sleep cycles for conditions like insomnia, promoting restful and rejuvenating sleep.</p>
-                    </div>
-                    <!-- Service Card -->
-                    <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-                        <h3 class="text-xl font-bold text-green-800 mb-3">Leukoderma (Vitiligo)</h3>
-                        <p class="text-gray-600">Stimulating natural re-pigmentation and managing the spread of white patches on the skin.</p>
-                    </div>
-                    <!-- Service Card -->
-                    <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-                        <h3 class="text-xl font-bold text-green-800 mb-3">Eczema & Skin Ailments</h3>
-                        <p class="text-gray-600">Soothing skin inflammation and addressing the internal triggers of eczema for long-term relief.</p>
-                    </div>
-                    <!-- Service Card -->
-                    <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-                        <h3 class="text-xl font-bold text-green-800 mb-3">Child Care</h3>
-                        <p class="text-gray-600">Gentle and safe remedies for common childhood illnesses, boosting immunity and overall health.</p>
-                    </div>
-                    <!-- Service Card -->
-                    <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-                        <h3 class="text-xl font-bold text-green-800 mb-3">Women's Health</h3>
-                        <p class="text-gray-600">Effective management of menstrual irregularities and menopausal problems.</p>
-                    </div>
-                    <!-- Service Card -->
-                    <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-                        <h3 class="text-xl font-bold text-green-800 mb-3">Hair Loss</h3>
-                        <p class="text-gray-600">Addressing root causes like hormonal imbalance and stress to reduce hair fall and promote growth.</p>
-                    </div>
-                    <!-- Service Card -->
-                    <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-                        <h3 class="text-xl font-bold text-green-800 mb-3">Migraine, Piles & Acidity</h3>
-                        <p class="text-gray-600">Providing relief from chronic conditions like migraines, piles, and acidity through holistic treatment.</p>
-                    </div>
+        <!-- ============ CONTACT ============ -->
+        <section id="contact" class="py-14 md:py-20 bg-mint/50">
+            <div class="container mx-auto px-4 md:px-6">
+                <div class="text-center max-w-2xl mx-auto mb-10 md:mb-14 reveal">
+                    <p class="text-emeraldx font-bold uppercase tracking-widest text-xs mb-3">We're nearby</p>
+                    <h2 class="font-display text-3xl md:text-[2.6rem] font-semibold text-forest leading-tight">Get in touch</h2>
                 </div>
-            </div>
-        </section>
-
-        <!-- Timings Section -->
-        <section id="timings" class="py-20 bg-white">
-            <div class="container mx-auto px-6">
-                <h2 class="section-title text-4xl text-center text-green-900 mb-12">Clinic Hours</h2>
-                <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div class="bg-gray-50 border border-gray-200 p-6 rounded-lg">
-                        <h3 class="text-2xl font-bold text-green-800 mb-4 text-center font-lora">In-Clinic Consultation</h3>
-                        <div id="clinic-status" class="text-center mb-4 font-semibold"></div>
-                        <table class="w-full text-left text-gray-600">
-                            <tbody>
-                                <tr class="border-b">
-                                    <td class="py-2 font-medium">Monday - Saturday</td>
-                                    <td class="py-2 text-right">11:00 AM – 1:00 PM</td>
-                                </tr>
-                                <tr class="border-b">
-                                    <td class="py-2 font-medium">Monday - Saturday</td>
-                                    <td class="py-2 text-right">5:30 PM – 8:30 PM</td>
-                                </tr>
-                                <tr class="border-b">
-                                    <td class="py-2 font-medium">Sunday</td>
-                                    <td class="py-2 text-right text-red-600">Closed</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                     <div class="bg-gray-50 border border-gray-200 p-6 rounded-lg">
-                        <h3 class="text-2xl font-bold text-green-800 mb-4 text-center font-lora">Online Consultation</h3>
-                        <div id="online-status" class="text-center mb-4 font-semibold"></div>
-                        <table class="w-full text-left text-gray-600">
-                            <tbody>
-                                <tr class="border-b">
-                                    <td class="py-2 font-medium">Monday - Saturday</td>
-                                    <td class="py-2 text-right">8:00 AM – 9:00 PM</td>
-                                </tr>
-                                <tr class="border-b">
-                                    <td class="py-2 font-medium">Sunday</td>
-                                    <td class="py-2 text-right text-red-600">Limited Availability</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Testimonials Section -->
-        <section id="testimonials" class="py-20">
-            <div class="container mx-auto px-6">
-                <h2 class="section-title text-4xl text-center text-green-900 mb-12">What Our Patients Say</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Testimonial Card -->
-                    <div class="bg-white p-8 rounded-lg shadow-lg">
-                        <p class="text-gray-600 italic mb-4">"Dr. Swarnalatha's treatment for my chronic migraine has been life-changing. I haven't felt this good in years. Her approach is so caring and thorough."</p>
-                        <p class="font-bold text-green-800">- Priya S.</p>
-                    </div>
-                    <!-- Testimonial Card -->
-                    <div class="bg-white p-8 rounded-lg shadow-lg">
-                        <p class="text-gray-600 italic mb-4">"My son's recurring eczema has completely cleared up after consulting at this clinic. The medicines are gentle and so effective. Highly recommended for child care."</p>
-                        <p class="font-bold text-green-800">- Anand K.</p>
-                    </div>
-                    <!-- Testimonial Card -->
-                    <div class="bg-white p-8 rounded-lg shadow-lg">
-                        <p class="text-gray-600 italic mb-4">"I was suffering from severe acidity and piles. The homeopathic treatment provided immense relief without any side effects. Thank you, Doctor!"</p>
-                        <p class="font-bold text-green-800">- Rajeshwari M.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact & Appointment Section -->
-        <section id="contact" class="py-20 bg-green-50">
-            <div class="container mx-auto px-6">
-                <h2 class="section-title text-4xl text-center text-green-900 mb-12">Get In Touch</h2>
                 <div class="flex flex-col lg:flex-row gap-8">
-                    <!-- Map -->
-                    <div class="lg:w-1/2 h-96 rounded-lg shadow-lg overflow-hidden">
-                         <!-- Using Google Maps Embed API for reliability -->
-                         <iframe
-                            class="w-full h-full"
-                            style="border:0"
-                            loading="lazy"
-                            allowfullscreen
+                    <div id="appointment" class="lg:w-1/2 bg-white p-6 md:p-9 rounded-3xl shadow-xl shadow-emerald-900/10 order-1 reveal">
+                        <h3 class="font-display text-2xl md:text-3xl font-semibold text-forest mb-6">Book an appointment</h3>
+
+                        <!-- Booking form -->
+                        <div class="mb-4">
+                            <label for="bk-name" class="block text-sm font-bold text-forest mb-1.5">Your name</label>
+                            <input type="text" id="bk-name" placeholder="e.g., Priya S" autocomplete="name"
+                                   class="w-full border-2 border-gray-200 rounded-xl px-4 py-3 focus:border-emeraldx focus:outline-none text-base">
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-4">
+                            <div>
+                                <label for="bk-date" class="block text-sm font-bold text-forest mb-1.5">Date</label>
+                                <input type="date" id="bk-date"
+                                       class="w-full border-2 border-gray-200 rounded-xl px-3 py-3 focus:border-emeraldx focus:outline-none text-base bg-white">
+                            </div>
+                            <div>
+                                <label for="bk-time" class="block text-sm font-bold text-forest mb-1.5">Preferred time</label>
+                                <select id="bk-time" class="w-full border-2 border-gray-200 rounded-xl px-3 py-3 focus:border-emeraldx focus:outline-none text-base bg-white">
+                                    <option value="Morning (11 AM – 1 PM)">Morning (11 AM – 1 PM)</option>
+                                    <option value="Evening (6 PM – 8:30 PM)">Evening (6 PM – 8:30 PM)</option>
+                                    <option value="Online consultation">Online consultation</option>
+                                </select>
+                            </div>
+                        </div>
+                        <p id="bk-error" class="hidden text-sm font-semibold text-red-600 mb-3">Please enter your name and pick a date.</p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-3">
+                            <button onclick="sendBooking('whatsapp')"
+                               class="btn-press flex items-center justify-center bg-wa text-white text-base font-bold px-4 py-4 rounded-2xl transition">
+                                <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                                Book via WhatsApp
+                            </button>
+                            <button onclick="sendBooking('sms')"
+                               class="btn-press flex items-center justify-center bg-forest text-white text-base font-bold px-4 py-4 rounded-2xl hover:bg-emeraldx transition">
+                                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 01-9 8.36 8.5 8.5 0 01-3.4-.7L3 21l1.84-5.6a8.38 8.38 0 01-.84-3.9 8.5 8.5 0 018.5-8.5 8.38 8.38 0 018.5 8.5z"/></svg>
+                                Book via SMS
+                            </button>
+                        </div>
+                        <p class="text-gray-400 text-xs text-center mb-6">Your details open in WhatsApp/SMS on your phone — just press send. We will confirm your appointment.</p>
+
+                        <div class="border-t border-gray-100 pt-5">
+                            <div class="mb-4 flex items-start gap-3">
+                                <svg class="w-5 h-5 text-emeraldx mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.69 18.933l.003.001C9.89 19.02 10 19 10 19s.11.02.308-.066l.002-.001.006-.003.018-.008a5.741 5.741 0 00.281-.14c.186-.096.446-.24.757-.433.62-.384 1.445-.966 2.274-1.765C15.302 14.988 17 12.493 17 9A7 7 0 103 9c0 3.492 1.698 5.988 3.355 7.584a13.731 13.731 0 002.273 1.765 11.842 11.842 0 00.976.544l.062.029.018.008.006.003zM10 11.25a2.25 2.25 0 100-4.5 2.25 2.25 0 000 4.5z" clip-rule="evenodd"/></svg>
+                                <p class="text-gray-600 text-sm">9, Shakti Nagar 2nd Avenue, Shakthi Nagar,<br>Nolambur, Chennai, Tamil Nadu 600095</p>
+                            </div>
+                            <a href="tel:+919894686664" onclick="trackConversion('phone_call_click', ADS_LABEL_CALL)"
+                               class="btn-press flex items-center justify-center w-full bg-forest text-white text-lg font-bold px-6 py-4 rounded-2xl hover:bg-emeraldx transition mb-3">
+                                <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3.5A1.5 1.5 0 013.5 2h1.148a1.5 1.5 0 011.465 1.175l.716 3.223a1.5 1.5 0 01-1.052 1.767l-.933.267c-.41.117-.643.555-.48.95a11.542 11.542 0 006.254 6.254c.395.163.833-.07.95-.48l.267-.933a1.5 1.5 0 011.767-1.052l3.223.716A1.5 1.5 0 0118 15.352V16.5a1.5 1.5 0 01-1.5 1.5H15c-1.149 0-2.263-.15-3.326-.43A13.022 13.022 0 012.43 8.326 13.019 13.019 0 012 5V3.5z"/></svg>
+                                Or call 98946 86664
+                            </a>
+                            <p class="text-gray-500 text-center text-sm mb-4">Alternate: <a href="tel:+919884671188" onclick="trackConversion('phone_call_click', ADS_LABEL_CALL)" class="font-bold text-emeraldx">98846 71188</a></p>
+                            <a href="https://www.google.com/maps/dir//Jayaa+Tharsini+Homoeo+Clinic,+9,+Shakti+Nagar+2nd+Avenue,+Shakthi+Nagar,+Nolambur,+Chennai,+Tamil+Nadu+600095" target="_blank" rel="noopener"
+                               onclick="gtag('event', 'get_directions_click', {event_category:'engagement'})"
+                               class="btn-press inline-block w-full text-center border-2 border-forest text-forest px-6 py-3.5 rounded-2xl font-bold hover:bg-forest hover:text-white transition">Get Directions</a>
+                        </div>
+                    </div>
+                    <div class="lg:w-1/2 h-72 md:h-auto md:min-h-[420px] rounded-3xl shadow-xl shadow-emerald-900/10 overflow-hidden order-2 reveal">
+                         <iframe class="w-full h-full" style="border:0" loading="lazy" title="Clinic location map" allowfullscreen
                             src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA4s7sLUUZnpZAxom6wFx4_UirwAqfpOrM&q=Jayaa%20Tharsini%20Homoeo%20Clinic%2C%20Nolambur%2C%20Chennai">
                          </iframe>
-                    </div>
-                    <!-- Contact Info -->
-                    <div id="appointment" class="lg:w-1/2 bg-white p-8 rounded-lg shadow-lg">
-                        <h3 class="text-3xl font-bold text-green-800 mb-6 font-lora">Visit Us or Call for an Appointment</h3>
-                        <div class="mb-6">
-                            <h4 class="text-lg font-semibold text-gray-700">Address:</h4>
-                            <p class="text-gray-600">9, Shakti Nagar 2nd Avenue, Shakthi Nagar,<br>Nolambur, Chennai, Tamil Nadu 600095</p>
-                        </div>
-                        <div class="mb-6">
-                            <h4 class="text-lg font-semibold text-gray-700">Book Your Appointment:</h4>
-                            <p class="text-2xl font-bold text-green-600 hover:text-green-700"><a href="tel:+919894686664">98946 86664</a></p>
-                            <p class="text-2xl font-bold text-green-600 hover:text-green-700"><a href="tel:+919884671188">98846 71188</a></p>
-                        </div>
-                        <a href="https://www.google.com/maps/dir//Jayaa+Tharsini+Homoeo+Clinic,+9,+Shakti+Nagar+2nd+Avenue,+Shakthi+Nagar,+Nolambur,+Chennai,+Tamil+Nadu+600095" target="_blank" class="inline-block w-full text-center bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition duration-300">Get Directions</a>
                     </div>
                 </div>
             </div>
@@ -274,71 +702,217 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-green-800 text-white py-8">
+    <footer class="bg-forest text-white py-10">
         <div class="container mx-auto px-6 text-center">
-            <p>&copy; 2026 Jayaa Tharsini Homoeo Clinic. All Rights Reserved.</p>
-            <p class="text-sm text-green-200 mt-2">Designed with care for your well-being.</p>
+            <svg class="w-8 h-8 mx-auto mb-3 opacity-90" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+                <path d="M24 4C24 4 10 18 10 30a14 14 0 0028 0C38 18 24 4 24 4z" fill="#d8f3e6"/>
+            </svg>
+            <p class="font-display font-medium">Jayaa Tharsini Homoeo Clinic</p>
+            <p class="text-sm text-emerald-100/70 mt-2">&copy; 2026 All Rights Reserved &bull; Designed with care for your well-being</p>
         </div>
     </footer>
 
+    <!-- Floating WhatsApp (desktop/tablet) -->
+    <a href="https://wa.me/919894686664?text=Hello%20Doctor%2C%20I%20would%20like%20to%20book%20an%20appointment."
+       target="_blank" rel="noopener" onclick="trackConversion('whatsapp_click', ADS_LABEL_WHATSAPP)"
+       aria-label="Chat on WhatsApp"
+       class="hidden md:flex fixed bottom-6 right-6 z-50 bg-wa text-white w-16 h-16 rounded-full items-center justify-center shadow-2xl hover:scale-105 transition">
+        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    </a>
+
+    <!-- Sticky bottom bar (mobile) -->
+    <div class="md:hidden fixed bottom-0 left-0 right-0 z-50 grid grid-cols-2 shadow-[0_-4px_16px_rgba(14,59,46,0.15)]">
+        <a href="tel:+919894686664" onclick="trackConversion('phone_call_click', ADS_LABEL_CALL)"
+           class="flex items-center justify-center gap-2 bg-forest text-white font-bold py-4 text-base">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3.5A1.5 1.5 0 013.5 2h1.148a1.5 1.5 0 011.465 1.175l.716 3.223a1.5 1.5 0 01-1.052 1.767l-.933.267c-.41.117-.643.555-.48.95a11.542 11.542 0 006.254 6.254c.395.163.833-.07.95-.48l.267-.933a1.5 1.5 0 011.767-1.052l3.223.716A1.5 1.5 0 0118 15.352V16.5a1.5 1.5 0 01-1.5 1.5H15c-1.149 0-2.263-.15-3.326-.43A13.022 13.022 0 012.43 8.326 13.019 13.019 0 012 5V3.5z"/></svg>
+            Call Now
+        </a>
+        <a href="https://wa.me/919894686664?text=Hello%20Doctor%2C%20I%20would%20like%20to%20book%20an%20appointment."
+           target="_blank" rel="noopener" onclick="trackConversion('whatsapp_click', ADS_LABEL_WHATSAPP)"
+           class="flex items-center justify-center gap-2 bg-wa text-white font-bold py-4 text-base">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            WhatsApp
+        </a>
+    </div>
+
     <script>
-        // Mobile menu toggle
+        // Mobile menu
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
+        mobileMenuButton.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+        mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileMenu.classList.add('hidden')));
 
-        // Clinic Status Logic
+        // Scroll reveal
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+        }, { threshold: 0.12 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // Clinic status — always India time (Asia/Kolkata)
+        function getIndiaTime() {
+            const parts = new Intl.DateTimeFormat('en-GB', {
+                timeZone: 'Asia/Kolkata', hour12: false,
+                weekday: 'short', hour: 'numeric', minute: 'numeric'
+            }).formatToParts(new Date());
+            const get = t => parts.find(p => p.type === t)?.value;
+            const dayMap = {Sun:0, Mon:1, Tue:2, Wed:3, Thu:4, Fri:5, Sat:6};
+            return { day: dayMap[get('weekday')], time: parseInt(get('hour'),10) + parseInt(get('minute'),10)/60 };
+        }
+
         function updateClinicStatus() {
-            const now = new Date();
-            // Note: India is UTC+5:30. JS Date object uses local time from browser.
-            // Assuming browser's timezone is correctly set to India time.
-            const day = now.getDay(); // 0 = Sunday, 1 = Monday, ..., 6 = Saturday
-            const hour = now.getHours();
-            const minute = now.getMinutes();
-            const currentTime = hour + minute / 60;
-
+            const { day, time } = getIndiaTime();
             const clinicStatusEl = document.getElementById('clinic-status');
             const onlineStatusEl = document.getElementById('online-status');
+            const heroStatusEl = document.getElementById('hero-status');
 
-            // --- In-Clinic Status ---
             let isClinicOpen = false;
-            // Monday to Saturday (day 1 to 6)
             if (day >= 1 && day <= 6) {
-                const morningSession = (currentTime >= 11 && currentTime < 13);
-                const eveningSession = (currentTime >= 17.5 && currentTime < 20.5);
-                if (morningSession || eveningSession) {
-                    isClinicOpen = true;
+                if ((time >= 11 && time < 13) || (time >= 18 && time < 20.5)) isClinicOpen = true;
+            }
+            clinicStatusEl.innerHTML = isClinicOpen
+                ? '<span class="inline-flex items-center text-emerald-300"><span class="h-2.5 w-2.5 bg-emerald-300 rounded-full mr-2 active-status"></span>Open Now</span>'
+                : '<span class="inline-flex items-center text-red-300"><span class="h-2.5 w-2.5 bg-red-300 rounded-full mr-2"></span>Currently Closed</span>';
+
+            const isOnlineOpen = (day >= 1 && day <= 6 && time >= 8 && time < 21);
+            onlineStatusEl.innerHTML = isOnlineOpen
+                ? '<span class="inline-flex items-center text-emerald-300"><span class="h-2.5 w-2.5 bg-emerald-300 rounded-full mr-2 active-status"></span>Available Now</span>'
+                : '<span class="inline-flex items-center text-red-300"><span class="h-2.5 w-2.5 bg-red-300 rounded-full mr-2"></span>Offline</span>';
+
+            if (heroStatusEl) {
+                if (isClinicOpen) {
+                    heroStatusEl.innerHTML = '<span class="text-emeraldx">&#9679; Clinic is open now — call for a same-day appointment</span>';
+                } else if (isOnlineOpen) {
+                    heroStatusEl.innerHTML = '<span class="text-emeraldx">&#9679; Available now for online consultation — message us on WhatsApp</span>';
+                } else {
+                    heroStatusEl.innerHTML = '<span class="text-gray-500">Clinic opens Mon–Sat, 11 AM &amp; 6:00 PM — WhatsApp us anytime, we will reply</span>';
                 }
-            }
-
-            if (isClinicOpen) {
-                clinicStatusEl.innerHTML = '<span class="flex items-center justify-center text-green-600"><span class="h-3 w-3 bg-green-500 rounded-full mr-2 active-status"></span>Open Now</span>';
-            } else {
-                clinicStatusEl.innerHTML = '<span class="flex items-center justify-center text-red-600"><span class="h-3 w-3 bg-red-500 rounded-full mr-2"></span>Currently Closed</span>';
-            }
-
-            // --- Online Status ---
-            let isOnlineOpen = false;
-            if (day >= 1 && day <= 6) {
-                if (currentTime >= 8 && currentTime < 21) {
-                    isOnlineOpen = true;
-                }
-            }
-
-            if (isOnlineOpen) {
-                onlineStatusEl.innerHTML = '<span class="flex items-center justify-center text-green-600"><span class="h-3 w-3 bg-green-500 rounded-full mr-2 active-status"></span>Available for Online Consultation</span>';
-            } else {
-                onlineStatusEl.innerHTML = '<span class="flex items-center justify-center text-red-600"><span class="h-3 w-3 bg-red-500 rounded-full mr-2"></span>Offline</span>';
             }
         }
 
-        // Run status check on page load and every minute
+        // Today's date in India, formatted YYYY-MM-DD
+        function indiaToday() {
+            return new Intl.DateTimeFormat('en-CA', { timeZone: 'Asia/Kolkata' }).format(new Date());
+        }
+        function indiaDatePlusDays(days) {
+            return new Intl.DateTimeFormat('en-CA', { timeZone: 'Asia/Kolkata' }).format(new Date(Date.now() + days * 86400000));
+        }
+
         document.addEventListener('DOMContentLoaded', () => {
             updateClinicStatus();
-            setInterval(updateClinicStatus, 60000); // Update every 60 seconds
+            setInterval(updateClinicStatus, 60000);
+            // Booking form: default to today, block past dates, cap at 90 days ahead
+            const d = document.getElementById('bk-date');
+            if (d) {
+                d.min = indiaToday();
+                d.max = indiaDatePlusDays(90);
+                d.value = indiaToday();
+            }
         });
+
+        // ===== Appointment booking → WhatsApp or SMS =====
+        function sendBooking(channel) {
+            const nameEl = document.getElementById('bk-name');
+            const dateEl = document.getElementById('bk-date');
+            const timeEl = document.getElementById('bk-time');
+            const err    = document.getElementById('bk-error');
+
+            const name = nameEl.value.trim();
+            const date = dateEl.value;
+            const today = indiaToday();
+            const maxDate = indiaDatePlusDays(90);
+
+            // Validation
+            let problem = '';
+            if (!name) {
+                problem = 'Please enter your name.';
+            } else if (!date || !/^\d{4}-\d{2}-\d{2}$/.test(date) || isNaN(new Date(date + 'T00:00:00').getTime())) {
+                problem = 'Please pick a valid date.';
+            } else if (date < today) {
+                problem = 'Please pick today or a future date.';
+            } else if (date > maxDate) {
+                problem = 'Please pick a date within the next 90 days.';
+            }
+            if (problem) {
+                err.textContent = problem;
+                err.classList.remove('hidden');
+                return;
+            }
+            err.classList.add('hidden');
+
+            // Format date nicely: 2026-07-11 -> 11 Jul 2026
+            const dt = new Date(date + 'T00:00:00');
+            const niceDate = dt.toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' });
+
+            const msg = 'Appointment Request\n'
+                      + 'Name: ' + name + '\n'
+                      + 'Date: ' + niceDate + '\n'
+                      + 'Time: ' + timeEl.value;
+
+            // Clear the form for the next use
+            function clearForm() {
+                nameEl.value = '';
+                dateEl.value = indiaToday();
+                timeEl.selectedIndex = 0;
+            }
+
+            if (channel === 'whatsapp') {
+                trackConversion('whatsapp_click', ADS_LABEL_WHATSAPP);
+                gtag('event', 'booking_form_submit', { event_category: 'lead', event_label: 'whatsapp' });
+                clearForm();
+                window.open('https://wa.me/919894686664?text=' + encodeURIComponent(msg), '_blank');
+            } else {
+                trackConversion('booking_form_submit', ADS_LABEL_BOOKING);
+                gtag('event', 'booking_form_submit', { event_category: 'lead', event_label: 'sms' });
+                clearForm();
+                // The '?&body' format works on both iOS and Android
+                window.location.href = 'sms:+919894686664?&body=' + encodeURIComponent(msg);
+            }
+        }
+
+        /* ============================================================
+           GOOGLE ADS MESSAGE MATCH — dynamic headline per ad group
+           ============================================================
+           In each Google Ads ad group, set the Final URL with a ?cond=
+           parameter so the landing page headline matches the ad:
+
+             Kidney stones ad group : https://yourdomain.com/?cond=kidney
+             Thyroid ad group       : https://yourdomain.com/?cond=thyroid
+             Skin/eczema ad group   : https://yourdomain.com/?cond=skin
+             Vitiligo ad group      : https://yourdomain.com/?cond=vitiligo
+             Hair loss ad group     : https://yourdomain.com/?cond=hair
+             Piles ad group         : https://yourdomain.com/?cond=piles
+             Migraine ad group      : https://yourdomain.com/?cond=migraine
+             Child care ad group    : https://yourdomain.com/?cond=child
+             Women's health group   : https://yourdomain.com/?cond=women
+             Sleep ad group         : https://yourdomain.com/?cond=sleep
+
+           Matching the searcher's problem in the headline improves
+           conversion rate and Google Ads Quality Score.
+           ============================================================ */
+        (function () {
+            const conditions = {
+                kidney:   { h: 'Kidney Stone', sub: 'kidney stones' },
+                thyroid:  { h: 'Thyroid', sub: 'thyroid disorders' },
+                skin:     { h: 'Skin &amp; Eczema', sub: 'eczema and chronic skin ailments' },
+                vitiligo: { h: 'Vitiligo', sub: 'leukoderma (vitiligo)' },
+                hair:     { h: 'Hair Loss', sub: 'hair fall and hair thinning' },
+                piles:    { h: 'Piles', sub: 'piles and fissures' },
+                migraine: { h: 'Migraine', sub: 'chronic migraine and headaches' },
+                child:    { h: 'Child Care', sub: "children's recurring illnesses" },
+                women:    { h: "Women's Health", sub: 'menstrual and menopausal problems' },
+                sleep:    { h: 'Sleep Disorder', sub: 'insomnia and sleep disorders' },
+                acidity:  { h: 'Acidity', sub: 'acidity and gastric problems' }
+            };
+            const cond = new URLSearchParams(location.search).get('cond');
+            const c = cond && conditions[cond.toLowerCase()];
+            if (!c) return;
+            const h1 = document.getElementById('hero-h1');
+            if (h1) {
+                h1.innerHTML = c.h + ' <span class="italic text-emeraldx">Homeopathy</span> Treatment in Nolambur, Chennai';
+            }
+            // Track which condition page variant was shown
+            gtag('event', 'ad_condition_view', { event_category: 'ads', event_label: cond.toLowerCase() });
+        })();
     </script>
 
 </body>
