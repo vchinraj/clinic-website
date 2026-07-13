@@ -71,20 +71,27 @@
       if (ADS_CONVERSION_ID) { gtag('config', ADS_CONVERSION_ID); }
 
       function trackConversion(eventName, adsLabel) {
-        gtag('event', eventName, { event_category: 'lead', event_label: eventName });
+        gtag('event', eventName, { event_category: 'lead', event_label: eventName, transport_type: 'beacon' });
         if (ADS_CONVERSION_ID && adsLabel) {
           gtag('event', 'conversion', { send_to: ADS_CONVERSION_ID + '/' + adsLabel });
         }
       }
 
-      // Fires the WhatsApp conversion event, THEN opens WhatsApp a moment later,
-      // so Analytics reliably records whatsapp_click before the tab navigates away.
+      // Fires the WhatsApp event using a beacon (which is delivered even when the
+      // browser is immediately backgrounded by the WhatsApp app), then navigates.
+      // Beacons don't get cancelled by app-switching, so no artificial delay is needed.
       function openWhatsApp(url) {
-        gtag('event', 'whatsapp_click', { event_category: 'lead', event_label: 'whatsapp_click' });
+        gtag('event', 'whatsapp_click', { event_category: 'lead', event_label: 'whatsapp_click', transport_type: 'beacon' });
         if (ADS_CONVERSION_ID && ADS_LABEL_WHATSAPP) {
           gtag('event', 'conversion', { send_to: ADS_CONVERSION_ID + '/' + ADS_LABEL_WHATSAPP });
         }
-        setTimeout(function () { window.open(url, '_blank'); }, 350);
+        // Navigate in the SAME tab on mobile (opens the WhatsApp app); new tab on desktop.
+        var isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+        if (isMobile) {
+          window.location.href = url;
+        } else {
+          window.open(url, '_blank');
+        }
         return false;
       }
     </script>
@@ -870,16 +877,18 @@
             // The label records whether it was sent via WhatsApp or SMS.
             // (We intentionally do NOT also fire whatsapp_click here, so the
             //  'WhatsApp Us' buttons and the booking form stay separate in reports.)
+            var isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
             if (channel === 'whatsapp') {
-                gtag('event', 'booking_form_submit', { event_category: 'lead', event_label: 'whatsapp' });
+                gtag('event', 'booking_form_submit', { event_category: 'lead', event_label: 'whatsapp', transport_type: 'beacon' });
                 if (ADS_CONVERSION_ID && ADS_LABEL_BOOKING) {
                     gtag('event', 'conversion', { send_to: ADS_CONVERSION_ID + '/' + ADS_LABEL_BOOKING });
                 }
                 const waUrl = 'https://wa.me/919894686664?text=' + encodeURIComponent(msg);
                 clearForm();
-                setTimeout(function () { window.open(waUrl, '_blank'); }, 350);
+                if (isMobile) { window.location.href = waUrl; }
+                else { window.open(waUrl, '_blank'); }
             } else {
-                gtag('event', 'booking_form_submit', { event_category: 'lead', event_label: 'sms' });
+                gtag('event', 'booking_form_submit', { event_category: 'lead', event_label: 'sms', transport_type: 'beacon' });
                 if (ADS_CONVERSION_ID && ADS_LABEL_BOOKING) {
                     gtag('event', 'conversion', { send_to: ADS_CONVERSION_ID + '/' + ADS_LABEL_BOOKING });
                 }
