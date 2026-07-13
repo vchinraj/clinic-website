@@ -866,15 +866,23 @@
                 timeEl.selectedIndex = 0;
             }
 
+            // Booking form fires ONE clean conversion: booking_form_submit.
+            // The label records whether it was sent via WhatsApp or SMS.
+            // (We intentionally do NOT also fire whatsapp_click here, so the
+            //  'WhatsApp Us' buttons and the booking form stay separate in reports.)
             if (channel === 'whatsapp') {
-                trackConversion('whatsapp_click', ADS_LABEL_WHATSAPP);
                 gtag('event', 'booking_form_submit', { event_category: 'lead', event_label: 'whatsapp' });
+                if (ADS_CONVERSION_ID && ADS_LABEL_BOOKING) {
+                    gtag('event', 'conversion', { send_to: ADS_CONVERSION_ID + '/' + ADS_LABEL_BOOKING });
+                }
                 const waUrl = 'https://wa.me/919894686664?text=' + encodeURIComponent(msg);
                 clearForm();
                 setTimeout(function () { window.open(waUrl, '_blank'); }, 350);
             } else {
-                trackConversion('booking_form_submit', ADS_LABEL_BOOKING);
                 gtag('event', 'booking_form_submit', { event_category: 'lead', event_label: 'sms' });
+                if (ADS_CONVERSION_ID && ADS_LABEL_BOOKING) {
+                    gtag('event', 'conversion', { send_to: ADS_CONVERSION_ID + '/' + ADS_LABEL_BOOKING });
+                }
                 clearForm();
                 // The '?&body' format works on both iOS and Android
                 window.location.href = 'sms:+919894686664?&body=' + encodeURIComponent(msg);
